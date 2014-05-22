@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cidade.nome %>
+</p>
+
+<%= link_to 'Editar', edit_cidade_path(@cidade) %> |
+<%= link_to 'Voltar', cidades_path %>

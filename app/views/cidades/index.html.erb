@@ -1,0 +1,24 @@
+<h1>Lista de cidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cidades.each do |cidade| %>
+      <tr>
+        <td><%= cidade.nome %></td>
+        <td><%= link_to 'Exibir', cidade %></td>
+        <td><%= link_to 'Editar', edit_cidade_path(cidade) %></td>
+        <td><%= link_to 'Excluir', cidade, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova cidade', new_cidade_path %>
