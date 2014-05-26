@@ -1,12 +1,14 @@
 <%= form_for(@cidade) do |f| %>
 
-  <%= partial "erros" %>
+  <%= render "erros" %>
 
   <div class="field">
     <%= f.label :nome %><br>
     <%= f.text_field :nome %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
