@@ -1,0 +1,11 @@
+<% if objeto.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(objeto.errors.count, "error") %> prohibited this cidade from being saved:</h2>
+
+    <ul>
+    <% objeto.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

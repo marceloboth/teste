@@ -1,6 +1,6 @@
 <%= form_for(@cidade) do |f| %>
 
-  <%= render "erros" %>
+  <%= render "shared/erros", objeto: f.object %>
 
   <div class="field">
     <%= f.label :nome %><br>
