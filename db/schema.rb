@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522003234) do
+ActiveRecord::Schema.define(version: 20140526004150) do
 
   create_table "cidades", force: true do |t|
     t.string   "nome"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20140522003234) do
     t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cidade_id"
   end
+
+  add_index "users", ["cidade_id"], name: "index_users_on_cidade_id"
 
 end
