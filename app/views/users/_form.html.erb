@@ -10,11 +10,13 @@
     <%= f.label :age %><br>
     <%= f.number_field :age %>
   </div>
+
   <div class="field">
     <%= f.label :cidade %><br>
     <%= f.collection_select :cidade_id, @cidades, :id, :nome,
-      { prompt: "Selecione uma categoria" } %>
+      { prompt: "Selecione uma cidade" } %>
   </div>
+
   <div class="field">
     <%= f.label :active %><br>
     <%= f.check_box :active %>

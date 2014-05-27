@@ -1,6 +1,7 @@
 <% if objeto.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(objeto.errors.count, "error") %> prohibited this cidade from being saved:</h2>
+    <h2><%= pluralize(objeto.errors.count, "erro") %>
+        <%= t('form.erro', cadastro: 'cadastro') %></h2>
 
     <ul>
     <% objeto.errors.full_messages.each do |message| %>
