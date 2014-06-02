@@ -1,0 +1,12 @@
+<%= form_for @estado do |f| %>
+  <p>
+    <%= f.label :nome %> <br/>
+    <%= f.text_field :nome %>
+  </p>
+  <p>
+    <%= f.label :sigla%> <br/>
+    <%= f.text_field :sigla%>
+  </p>
+
+  <%= f.submit "Salvar" %>
+<% end %>
